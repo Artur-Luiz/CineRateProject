@@ -1,0 +1,160 @@
+/*
+   CSS styling examples for the Vaadin app.
+
+   Visit https://vaadin.com/docs/styling/application-theme/ for more information.
+*/
+
+
+/* Example: CSS class name to center align the content . */
+.centered-content {
+  margin: 0 auto;
+  max-width: 250px;
+}
+
+/* Example: the style is applied only to the textfields which have the `bordered` class name. */
+vaadin-text-field.bordered::part(input-field) {
+  box-shadow: inset 0 0 0 1px var(--lumo-contrast-30pct);
+  background-color: var(--lumo-base-color);
+}
+
+.register-form{
+    background-color: #2C3D52;
+    padding: 40px 20px;
+}
+
+.header{
+    display: flex;
+     flex-direction: row;
+     justify-content: Between;
+     align-items: center;
+}
+
+.moviecard{
+    width: 250px;
+    height: 500px;
+    background-color: #2C3D52;
+    border-radius: 10px;
+    overflow:hidden;
+    color: white;
+    justify-content: start;
+    max-width:250px;
+    padding:0;
+    align-items: center;
+    display:flex;
+}
+
+.moviecard:hover{
+    cursor: pointer;
+    getStyle().set("box-shadow", "2px 2px 12px gray");
+}
+
+
+.moviecard-poster{
+    box-shadow: 2px 2px 12px gray;
+    width:100%;
+    height 70%;
+    margin: 0;
+    float:top;
+}
+
+.moviecard-title{
+    font-family: 'Aldrich', sans-serif;
+    font-weight: BOLD;
+    font-size: Medium;
+    width:100%;
+    overflow:visible;
+    text-align:center;
+    margin:0;
+    float:bottom;
+}
+
+.moviecard-status{
+    justify-content: center;
+    height:30px;
+    margin: 0;
+    float:top;
+}
+
+.moviecard-title-layout{
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:8px;
+    height:fit-content;
+}
+
+.moviecard-rate{
+    padding:0;
+    padding-bottom:10px;
+    float:bottom;
+    width:100%;
+    height: 40px;
+    justify-content:center;
+
+}
+
+@media screen and (max-screen: 600px){
+        .movie-dialog{
+            width: 285px;
+            height: 300px;
+            padding: 0 0 12px 12px;
+        }
+
+        .movie-dialog-image{
+            width:125px;
+            height:187px;
+        }
+}
+
+@media screen and (min-screen: 600px){
+    .movie-dialog{
+        width: 570px;
+        height: 600px;
+        padding: 0 0 35px 35px;
+    }
+
+    .movie-dialog-image{
+        width:250px;
+        height:375px;
+    }
+}
+
+
+.movie-dialog{
+    width: 570px;
+    height: 600px;
+    padding: 0 0 35px 35px;
+}
+
+.movie-dialog-content{
+    width:100%;
+    padding:0;
+    margin:0;
+    padding: 0;
+    align-items: start;
+    justify-content: content;
+}
+
+.movie-dialog-image{
+    width:250px;
+    height:375px;
+}
+
+.movie-dialog-title{
+    font-family: 'Aldrich', sans-serif;
+    font-weight: BOLD;
+    font-size: Medium;
+    justify-content:between;
+}
+
+.movie-dialog-review{
+    background-color: #2C3D52;
+    align-items:center;
+    padding:0;
+}
+
+.movie-dialog-review-title{
+    background-color: #55769E;
+    align-items:center;
+}
